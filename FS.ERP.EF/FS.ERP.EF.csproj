@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C8A6690-ECF6-43CD-8D80-71F8438442D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS.ERP.EF</RootNamespace>
+    <AssemblyName>FS.ERP.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CST.CCL">
+      <HintPath>..\Libraries\Debug\CST.CCL.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AppCNF\SMSOrEmailOperationsOrBehaviourConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\LetterTemplatesConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\CalendarConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\PaymentModeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMOrEquipmentConditionConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMConfigConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\ReligionConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\StateProvinceConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\SectorZoneConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\DistrictWardConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\CountryRegionConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\CityTownConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\FiscalYearMonthConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\FiscalYearConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\DocumentOfStatementConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\DocumentDetailOfStatementConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\TransactionDocumentProcessConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\TransactionDocumentConfigConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\RecordStatusConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\OwnerTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\LocationSiteTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\LocationSiteConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\LoanTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\LeaseTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\InstrumentTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\InstrumentStatusConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMTransactionMethodConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMTaxGroupDetailConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMTaxGroupConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMManufacturedByConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMLifeTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\IMMGroupConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\GenderConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\AcquireTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\AppConfigConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\AppConfigDetailConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\CultureConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\CurrencyConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\DataTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\DiscrepancyTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\DomainTypeConfiguration.cs" />
+    <Compile Include="Configuration\AppCNF\OrganizationConfiguration.cs" />
+    <Compile Include="Configuration\CRM\GenerateQuotationConfiguration.cs" />
+    <Compile Include="Configuration\CRM\QuotationParameterMappingConfiguration.cs" />
+    <Compile Include="Configuration\CRM\QuotationTemplateConfiguration.cs" />
+    <Compile Include="Configuration\CRM\QuotationParameterConfiguration.cs" />
+    <Compile Include="Configuration\CRM\LoyaltyCardConfiguration.cs" />
+    <Compile Include="Configuration\CRM\LoyaltyTypeConfiguration.cs" />
+    <Compile Include="Configuration\CRM\LeadConfiguration.cs" />
+    <Compile Include="Configuration\CRM\CRMConfigConfiguration.cs" />
+    <Compile Include="Configuration\CRM\PipeLineConfiguration.cs" />
+    <Compile Include="Configuration\CRM\CRMPermissionTypeConfiguration.cs" />
+    <Compile Include="Configuration\CRM\CRMTeamRoleConfiguration.cs" />
+    <Compile Include="Configuration\CRM\TeamInfoConfiguration.cs" />
+    <Compile Include="Configuration\CRM\CustomerAdjustmentConfiguration.cs" />
+    <Compile Include="Configuration\FMS\BankAccountInstrumentInfoConfiguration.cs" />
+    <Compile Include="Configuration\FMS\VoucherTypeConfiguration.cs" />
+    <Compile Include="Configuration\FMS\TransactionMasterConfiguration.cs" />
+    <Compile Include="Configuration\FMS\TransactionDetailConfiguration.cs" />
+    <Compile Include="Configuration\FMS\BankBranchConfiguration.cs" />
+    <Compile Include="Configuration\FMS\BankAccountConfiguration.cs" />
+    <Compile Include="Configuration\FMS\COAConfigConfiguration.cs" />
+    <Compile Include="Configuration\FMS\COANatureConfiguration.cs" />
+    <Compile Include="Configuration\FMS\COAConfiguration.cs" />
+    <Compile Include="Configuration\FMS\BankConfiguration.cs" />
+    <Compile Include="Configuration\HRM\NoteSheetConfiguration.cs" />
+    <Compile Include="Configuration\HRM\IncidentTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\DegreeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\PerformanceGoalConfiguration.cs" />
+    <Compile Include="Configuration\HRM\TravelMediumConfiguration.cs" />
+    <Compile Include="Configuration\HRM\TravelRequestConfiguration.cs" />
+    <Compile Include="Configuration\HRM\ExpenseClaimConfiguration.cs" />
+    <Compile Include="Configuration\HRM\FieldExpensePolicyConfiguration.cs" />
+    <Compile Include="Configuration\HRM\BonusTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\SeparationTypeOrReasonConfiguration.cs" />
+    <Compile Include="Configuration\HRM\SeparationCheckListSetupConfiguration.cs" />
+    <Compile Include="Configuration\HRM\PayGradeProvidentFundAllocationConfiguration.cs" />
+    <Compile Include="Configuration\HRM\PayrollGroupConfiguration.cs" />
+    <Compile Include="Configuration\HRM\PayGradeEOBIAllocationConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeOverTimeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\MaritalStatusConfiguration.cs" />
+    <Compile Include="Configuration\HRM\OvertimeTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\ShiftConfiguration.cs" />
+    <Compile Include="Configuration\HRM\AllowanceOrBenefitTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\PayGradeAllowancesOrBenefitConfiguration.cs" />
+    <Compile Include="Configuration\HRM\AllowancesOrBenefitConfiguration.cs" />
+    <Compile Include="Configuration\HRM\PayGradeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\LeaveTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\LeavePolicyDetailConfiguration.cs" />
+    <Compile Include="Configuration\HRM\LeavePolicyConfiguration.cs" />
+    <Compile Include="Configuration\HRM\JobRoleConfiguration.cs" />
+    <Compile Include="Configuration\HRM\HireTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeStatusConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeLoanConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeLeaseConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeInfoRevisionConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeInfoHistoryConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeInfoConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeAllowanceOrBenefitConfiguration.cs" />
+    <Compile Include="Configuration\HRM\DocumentCheckListConfiguration.cs" />
+    <Compile Include="Configuration\HRM\DepartmentConfiguration.cs" />
+    <Compile Include="Configuration\HRM\DegreeInstituteConfiguration.cs" />
+    <Compile Include="Configuration\HRM\DeductionTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\SalaryTransferModeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\SalaryBreakUpPolicyConfiguration.cs" />
+    <Compile Include="Configuration\HRM\ReimbursementTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeSalaryConfiguration.cs" />
+    <Compile Include="Configuration\HRM\IncrementOrDecrementTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\ExpenseTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\AttendanceMachineTypeConfiguration.cs" />
+    <Compile Include="Configuration\HRM\DesignationConfiguration.cs" />
+    <Compile Include="Configuration\HRM\EmployeeRelationConfiguration.cs" />
+    <Compile Include="Configuration\CRM\PartyOrCustomerConfiguration.cs" />
+    <Compile Include="Configuration\IMM\JobCardConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ProductAssemblyMasterConfiguration.cs" />
+    <Compile Include="Configuration\IMM\BulletinBoardConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemModifierConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemDealConfiguration.cs" />
+    <Compile Include="Configuration\IMM\IMMCheckListConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ProductionMasterConfiguration.cs" />
+    <Compile Include="Configuration\IMM\PurchaseInvoiceMasterConfiguration.cs" />
+    <Compile Include="Configuration\IMM\PurchaseOrderAndReturnConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ReceipeDetailConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ReceipeMasterConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ServiceTypeConfiguration.cs" />
+    <Compile Include="Configuration\IMM\GRNandReturnCheckList.cs" />
+    <Compile Include="Configuration\IMM\GRNandReturn.cs" />
+    <Compile Include="Configuration\IMM\GRNandReturnDetail.cs" />
+    <Compile Include="Configuration\IMM\PurchaseOrderAndReturnDetailConfiguration.cs" />
+    <Compile Include="Configuration\IMM\DispatchReceiveMediumConfiguration.cs" />
+    <Compile Include="Configuration\IMM\GatePassConfiguration.cs" />
+    <Compile Include="Configuration\IMM\GatePassDetailConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemPriceConfiguration.cs" />
+    <Compile Include="Configuration\IMM\StockRequisitionOrIssuanceDetailConfiguration.cs" />
+    <Compile Include="Configuration\IMM\StockRequisitionOrIssuanceConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemAttributeAspectConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemAttributeDetailConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemAttributeConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemCategoryAttributeAspectConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemProfileConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemCategoryConfiguration.cs" />
+    <Compile Include="Configuration\IMM\ItemConfiguration.cs" />
+    <Compile Include="Configuration\IMM\EquipmentConfiguration.cs" />
+    <Compile Include="Configuration\IMM\UOMConfiguration.cs" />
+    <Compile Include="Configuration\IMM\PackingTypeConfiguration.cs" />
+    <Compile Include="Configuration\IMM\EquipmentTypeConfiguration.cs" />
+    <Compile Include="Configuration\IMM\EquipmentStatusConfiguration.cs" />
+    <Compile Include="Configuration\MenuCNF\FlavorConfiguration.cs" />
+    <Compile Include="Configuration\MenuCNF\MenuControlInfoConfiguration.cs" />
+    <Compile Include="Configuration\MenuCNF\ModuleParamInfoConfiguration.cs" />
+    <Compile Include="Configuration\MenuCNF\MenuConfiguration.cs" />
+    <Compile Include="Configuration\Sales\HoldBillOrInvoiceMasterConfiguration.cs" />
+    <Compile Include="Configuration\Sales\BillOrInvoiceMasterDetailConfiguration.cs" />
+    <Compile Include="Configuration\Sales\BillOrInvoiceMasterConfiguration.cs" />
+    <Compile Include="Configuration\Sales\BillOrInvoiceTypeConfiguration.cs" />
+    <Compile Include="Configuration\SRM\IMMFinishTypeOptionsConfiguration.cs" />
+    <Compile Include="Configuration\SRM\IncomeTaxSlabConfiguration.cs" />
+    <Compile Include="Configuration\SRM\VendorAdjustmentConfiguration.cs" />
+    <Compile Include="Configuration\SRM\VendorOrSupplierConfiguration.cs" />
+    <Compile Include="Configuration\SRM\SaleOrderConfiguration.cs" />
+    <Compile Include="Configuration\SRM\DeliveryNoteConfiguration.cs" />
+    <Compile Include="Configuration\UMS\SecurityRightConfiguration.cs" />
+    <Compile Include="Configuration\UMS\ProfileGroupConfiguration.cs" />
+    <Compile Include="Configuration\UMS\UserConfiguration.cs" />
+    <Compile Include="Db_Context\FsERP_Context.cs" />
+    <Compile Include="IdentityStore\ApplicationRoleStore.cs" />
+    <Compile Include="IdentityStore\ApplicationUserStore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FS.ERP.Models\FS.ERP.Models.csproj">
+      <Project>{107030d2-c427-408f-a53c-38e4b80962af}</Project>
+      <Name>FS.ERP.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

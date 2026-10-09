@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{107030D2-C427-408F-A53C-38E4B80962AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS.ERP.Models</RootNamespace>
+    <AssemblyName>FS.ERP.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CST.CCL">
+      <HintPath>..\Libraries\Debug\CST.CCL.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\BORequestMissingAttendance.cs" />
+    <Compile Include="BO\BOWorkFromHome.cs" />
+    <Compile Include="BO\BOJobCardHistory.cs" />
+    <Compile Include="BO\BOJobCardDetail.cs" />
+    <Compile Include="BO\BOJobCard.cs" />
+    <Compile Include="BO\BOAddition.cs" />
+    <Compile Include="BO\BONoteSheetRemarks.cs" />
+    <Compile Include="BO\BONoteSheet.cs" />
+    <Compile Include="BO\BOBudgetPlan.cs" />
+    <Compile Include="BO\BOSalaryPayment.cs" />
+    <Compile Include="BO\BOProductAssemblyDetail.cs" />
+    <Compile Include="BO\BOProductAssemblyMaster.cs" />
+    <Compile Include="BO\BOCafeOrRestaurantConfiguration.cs" />
+    <Compile Include="BO\BOPayrollCOAMapping.cs" />
+    <Compile Include="BO\BOCommissionBooking.cs" />
+    <Compile Include="BO\BOCommissionReceipt.cs" />
+    <Compile Include="BO\BOCommissionReceiptInvoiceMapping.cs" />
+    <Compile Include="BO\BOEmployeeIncomeTax.cs" />
+    <Compile Include="BO\BOCustomerAdjustment.cs" />
+    <Compile Include="BO\BOCustomerAdjustmentInvoiceMapping.cs" />
+    <Compile Include="BO\BOCustomerGroupOrTag.cs" />
+    <Compile Include="BO\BOCustomerGroupOrTagCustomerAssignment.cs" />
+    <Compile Include="BO\BOCustomerGroupOrTagUserAssignment.cs" />
+    <Compile Include="BO\BOCustomerReceipt.cs" />
+    <Compile Include="BO\BOCustomerReceiptInvoiceMapping.cs" />
+    <Compile Include="BO\BODeliveryNoteDetail.cs" />
+    <Compile Include="BO\BODeliveryNoteMaster.cs" />
+    <Compile Include="BO\BODutyRoster.cs" />
+    <Compile Include="BO\BOEmailAccounts.cs" />
+    <Compile Include="BO\BOEmailTemplateAssignment.cs" />
+    <Compile Include="BO\BOEmployeeGeoRestrictions.cs" />
+    <Compile Include="BO\BOEmployeeGoalAssignment.cs" />
+    <Compile Include="BO\BOEmployeeLoanPayment.cs" />
+    <Compile Include="BO\BOEmployeeLockedAttendanceDetails.cs" />
+    <Compile Include="BO\BOEmployeeManualAllowanceOrBenefit.cs" />
+    <Compile Include="BO\BOEmployeeManualOvertime.cs" />
+    <Compile Include="BO\BOEmployeeOvertimeProcess.cs" />
+    <Compile Include="BO\BOEmployeeSalaryLoanLease.cs" />
+    <Compile Include="BO\BOEmployeeTrackingConfiguration.cs" />
+    <Compile Include="BO\BOEmployeeTrackingDetail.cs" />
+    <Compile Include="BO\BOEquipmentIssuedOrReturn.cs" />
+    <Compile Include="BO\BOFreightEntrySlip.cs" />
+    <Compile Include="BO\BOGenerateQuotation.cs" />
+    <Compile Include="BO\BOGenerateQuotationDetail.cs" />
+    <Compile Include="BO\BOHall.cs" />
+    <Compile Include="BO\BOHoldBillOrInvoiceMaster.cs" />
+    <Compile Include="BO\BOHoldBillOrInvoiceMasterDetail.cs" />
+    <Compile Include="BO\BOIMMFinishTypeOptions.cs" />
+    <Compile Include="BO\BOIncrementOrDecrementRules.cs" />
+    <Compile Include="BO\BOIncrementOrDecrementType.cs" />
+    <Compile Include="BO\BOItemDefinition.cs" />
+    <Compile Include="BO\BOItemImages.cs" />
+    <Compile Include="BO\BOItemProfileBarCode.cs" />
+    <Compile Include="BO\BOLeavePolicyRule.cs" />
+    <Compile Include="BO\BOLocationSiteWiseItem.cs" />
+    <Compile Include="BO\BOLocationWiseSMSInfo.cs" />
+    <Compile Include="BO\BOPartyOrCustomerPlan.cs" />
+    <Compile Include="BO\BOPayrollInputDetails.cs" />
+    <Compile Include="BO\BOPayrollInputMaster.cs" />
+    <Compile Include="BO\BOPerformanceGoal.cs" />
+    <Compile Include="BO\BOPurchaseInvoiceDetail.cs" />
+    <Compile Include="BO\BOPurchaseInvoiceMaster.cs" />
+    <Compile Include="BO\BOPurchaseOrderAndReturnMapping.cs" />
+    <Compile Include="BO\BOQuotationParameter.cs" />
+    <Compile Include="BO\BOQuotationParameterItemDetail.cs" />
+    <Compile Include="BO\BOQuotationParameterMapping.cs" />
+    <Compile Include="BO\BOQuotationParameterDetail.cs" />
+    <Compile Include="BO\BOQuotationTemplate.cs" />
+    <Compile Include="BO\BOReligion.cs" />
+    <Compile Include="BO\BOBank.cs" />
+    <Compile Include="BO\BOBankAccount.cs" />
+    <Compile Include="BO\BOBankAccountInstrumentInfo.cs" />
+    <Compile Include="BO\BOBankBranch.cs" />
+    <Compile Include="BO\BOBillOrInvoiceMaster.cs" />
+    <Compile Include="BO\BOBillOrInvoiceMasterDetail.cs" />
+    <Compile Include="BO\BOBillOrInvoiceType.cs" />
+    <Compile Include="BO\BOBonusAllowancesMapping.cs" />
+    <Compile Include="BO\BOBonusPolicy.cs" />
+    <Compile Include="BO\BOBonusProcess.cs" />
+    <Compile Include="BO\BOBonusType.cs" />
+    <Compile Include="BO\BOBulletin.cs" />
+    <Compile Include="BO\BOBulletinCommunicationCategory.cs" />
+    <Compile Include="BO\BOCOAAsset.cs" />
+    <Compile Include="BO\BOCOAMappingForPCorCC.cs" />
+    <Compile Include="BO\BODeduction.cs" />
+    <Compile Include="BO\BODocument.cs" />
+    <Compile Include="BO\BODocumentCheckList.cs" />
+    <Compile Include="BO\BOEmpDocumentCheckList.cs" />
+    <Compile Include="BO\BOEmployeeDocuments.cs" />
+    <Compile Include="BO\BOEmployeeEmployment.cs" />
+    <Compile Include="BO\BOEmployeeHistory.cs" />
+    <Compile Include="BO\BOEmployeeIncrement.cs" />
+    <Compile Include="BO\BOEmployeeIncrementAllowanceOrBenefit.cs" />
+    <Compile Include="BO\BOEmployeeLease.cs" />
+    <Compile Include="BO\BOEmployeeLeaseInstallment.cs" />
+    <Compile Include="BO\BOEmployeeLeaveBalance.cs" />
+    <Compile Include="BO\BOEmployeeLoan.cs" />
+    <Compile Include="BO\BOEmployeeLoanInstallment.cs" />
+    <Compile Include="BO\BOEmployeeOverTime.cs" />
+    <Compile Include="BO\BOEmployeeSalary.cs" />
+    <Compile Include="BO\BOEmployeeSalaryAddition.cs" />
+    <Compile Include="BO\BOEmployeeSalaryAllowanceOrBenefit.cs" />
+    <Compile Include="BO\BOEmployeeSalaryDeduction.cs" />
+    <Compile Include="BO\BOEmployeeSalaryOverTime.cs" />
+    <Compile Include="BO\BOEmployeeSalaryReimbursement.cs" />
+    <Compile Include="BO\BOExpenseClaim.cs" />
+    <Compile Include="BO\BOExpenseClaimDetails.cs" />
+    <Compile Include="BO\BOExpensePayment.cs" />
+    <Compile Include="BO\BOFieldExpensePolicy.cs" />
+    <Compile Include="BO\BOFieldExpensePolicyDetail.cs" />
+    <Compile Include="BO\BOFieldExpenseType.cs" />
+    <Compile Include="BO\BOFiscalYearMonth.cs" />
+    <Compile Include="BO\BOFiscalYearMonthDetail.cs" />
+    <Compile Include="BO\BOFundDemandRegister.cs" />
+    <Compile Include="BO\BOFundDemandRegisterDetail.cs" />
+    <Compile Include="BO\BOFundDemandRequest.cs" />
+    <Compile Include="BO\BOFundDemandRequestDetail.cs" />
+    <Compile Include="BO\BOGatePass.cs" />
+    <Compile Include="BO\BOGatePassDetail.cs" />
+    <Compile Include="BO\BOGenerateLetter.cs" />
+    <Compile Include="BO\BOGRNandReturnCheckList.cs" />
+    <Compile Include="BO\BOHolidayDetails.cs" />
+    <Compile Include="BO\BOIMMCheckList.cs" />
+    <Compile Include="BO\BOIMMGroup.cs" />
+    <Compile Include="BO\BOIMMLoyaltyType.cs" />
+    <Compile Include="BO\BOIMMTransactionMethod.cs" />
+    <Compile Include="BO\BOIncomeTaxSlabDetail.cs" />
+    <Compile Include="BO\BOInstrumentStatus.cs" />
+    <Compile Include="BO\BOInstrumentType.cs" />
+    <Compile Include="BO\BOItem.cs" />
+    <Compile Include="BO\BOItemAttributeAspect.cs" />
+    <Compile Include="BO\BOItemAttributeAspectDetail.cs" />
+    <Compile Include="BO\BOItemDeal.cs" />
+    <Compile Include="BO\BOItemDealAssignment.cs" />
+    <Compile Include="BO\BOItemDealDetail.cs" />
+    <Compile Include="BO\BOItemModifier.cs" />
+    <Compile Include="BO\BOItemOrProfileServiceType.cs" />
+    <Compile Include="BO\BOItemPrice.cs" />
+    <Compile Include="BO\BOItemProfile.cs" />
+    <Compile Include="BO\BOJobProjectScheme.cs" />
+    <Compile Include="BO\BOJobProjectSchemeDetail.cs" />
+    <Compile Include="BO\BOLeadTask.cs" />
+    <Compile Include="BO\BOLeaveDeductionAgainstLate.cs" />
+    <Compile Include="BO\BOLeaveEncashmentProcess.cs" />
+    <Compile Include="BO\BOLeaveYearEndProcess.cs" />
+    <Compile Include="BO\BOLetterCode.cs" />
+    <Compile Include="BO\BOLetterTemplates.cs" />
+    <Compile Include="BO\BOLinkToTransaction.cs" />
+    <Compile Include="BO\BOLoyaltyCard.cs" />
+    <Compile Include="BO\BOLoyaltyPcOrCc.cs" />
+    <Compile Include="BO\BOMaritalStatus.cs" />
+    <Compile Include="BO\BOMassCommunication.cs" />
+    <Compile Include="BO\BOOverTimeType.cs" />
+    <Compile Include="BO\BOPartyOrCustomerLoyalty.cs" />
+    <Compile Include="BO\BOPartyOrCustomerServiceType.cs" />
+    <Compile Include="BO\BOPayGradeBonusAllocation.cs" />
+    <Compile Include="BO\BOProductionDetail.cs" />
+    <Compile Include="BO\BOProductionMaster.cs" />
+    <Compile Include="BO\BOReceipeMaster.cs" />
+    <Compile Include="BO\BOReceipeDetail.cs" />
+    <Compile Include="BO\BOReimbursement.cs" />
+    <Compile Include="BO\BOReimbursementType.cs" />
+    <Compile Include="BO\BORemittanceAdvice.cs" />
+    <Compile Include="BO\BORemittanceAdviceDetail.cs" />
+    <Compile Include="BO\BORequestTaxCertificate.cs" />
+    <Compile Include="BO\BOSaleInvoiceDetail.cs" />
+    <Compile Include="BO\BOSaleInvoiceMaster.cs" />
+    <Compile Include="BO\BOSaleOrderDetail.cs" />
+    <Compile Include="BO\BOSaleOrderMaster.cs" />
+    <Compile Include="BO\BOSeparationCheckList.cs" />
+    <Compile Include="BO\BOSeparationChecklistSetup.cs" />
+    <Compile Include="BO\BOSeparationSubmission.cs" />
+    <Compile Include="BO\BOSeparationTypeOrReason.cs" />
+    <Compile Include="BO\BOServiceType.cs" />
+    <Compile Include="BO\BOShiftOverTimeCriteria.cs" />
+    <Compile Include="BO\BOSlipNotes.cs" />
+    <Compile Include="BO\BOSMSOrEmailDescription.cs" />
+    <Compile Include="BO\BOSMSOrEmailOperationsOrBehaviour.cs" />
+    <Compile Include="BO\BOSMSOrEmailTags.cs" />
+    <Compile Include="BO\BOSubjectToDeliver.cs" />
+    <Compile Include="BO\BOTravellingMedium.cs" />
+    <Compile Include="BO\BOTravelRequest.cs" />
+    <Compile Include="BO\BOTravelRequestDetails.cs" />
+    <Compile Include="BO\BOUserEmailAssignment.cs" />
+    <Compile Include="BO\BOUserEmailLog.cs" />
+    <Compile Include="BO\BOVendorAdjustment.cs" />
+    <Compile Include="BO\BOVendorAdjustmentInvoiceMapping.cs" />
+    <Compile Include="BO\BOVendorOrSupplierServiceType.cs" />
+    <Compile Include="BO\BOVendorOrSupplierWiseItem.cs" />
+    <Compile Include="BO\BOVendorPayment.cs" />
+    <Compile Include="BO\BOVendorPaymentInvoiceMapping.cs" />
+    <Compile Include="BO\IdentityRole.cs" />
+    <Compile Include="BO\IdentityUser.cs" />
+    <Compile Include="BO\IdentityUserClaim.cs" />
+    <Compile Include="BO\IdentityUserLogin.cs" />
+    <Compile Include="BO\IdentityUserProfile.cs" />
+    <Compile Include="BO\BOGRNandReturn.cs" />
+    <Compile Include="BO\BOGRNandReturnDetail.cs" />
+    <Compile Include="BO\BOIMMOrEquipmentCondition.cs" />
+    <Compile Include="BO\BOPurchaseOrderAndReturn.cs" />
+    <Compile Include="BO\BOPurchaseOrderAndReturnDetail.cs" />
+    <Compile Include="BO\BOStockRequisitionOrIssuance.cs" />
+    <Compile Include="BO\BOStockRequisitionOrIssuanceDetail.cs" />
+    <Compile Include="BO\BOStockTakingAdjustment.cs" />
+    <Compile Include="BO\BOStockTakingAdjustmentDetail.cs" />
+    <Compile Include="BO\BODispatchReceiveMedium.cs" />
+    <Compile Include="BO\BOContacts.cs" />
+    <Compile Include="BO\BOCRMConfiguration.cs" />
+    <Compile Include="BO\BOLead.cs" />
+    <Compile Include="BO\BOLeadActivity.cs" />
+    <Compile Include="BO\BOOpportunity.cs" />
+    <Compile Include="BO\BOPipeline.cs" />
+    <Compile Include="BO\BOPipelineDetail.cs" />
+    <Compile Include="BO\BOTeamInfo.cs" />
+    <Compile Include="BO\BOTeamMembers.cs" />
+    <Compile Include="BO\BOTeamPermissions.cs" />
+    <Compile Include="BO\BOCRMPermissionType.cs" />
+    <Compile Include="BO\BOCRMTeamRole.cs" />
+    <Compile Include="BO\BOFlavor.cs" />
+    <Compile Include="BO\BOFlavorDetail.cs" />
+    <Compile Include="BO\BOPOSTableType.cs" />
+    <Compile Include="BO\BOTable.cs" />
+    <Compile Include="BO\BOPayGradeAssetsAllocation.cs" />
+    <Compile Include="BO\BOPayGradeDeductionAllocation.cs" />
+    <Compile Include="BO\BOPayGradeDocCheckListAllocation.cs" />
+    <Compile Include="BO\BOPayGradeEarningsAllocation.cs" />
+    <Compile Include="BO\BOPayGradeEOBIAllocation.cs" />
+    <Compile Include="BO\BOPayGradeEOBIAllowanceDetail.cs" />
+    <Compile Include="BO\BOPayGradeExpenseLimitAllocation.cs" />
+    <Compile Include="BO\BOPayGradeGratuityCriteria.cs" />
+    <Compile Include="BO\BOPayGradePayrollGroup.cs" />
+    <Compile Include="BO\BOPayrollGroup.cs" />
+    <Compile Include="BO\BOPayGradeProvidentFundAllocation.cs" />
+    <Compile Include="BO\BOPayGradeProvidentFundAllowanceDetail.cs" />
+    <Compile Include="BO\BOEmployeeAward.cs" />
+    <Compile Include="BO\BOEmployeeRelative.cs" />
+    <Compile Include="BO\BOIncidentType.cs" />
+    <Compile Include="BO\BOEmployeeIncident.cs" />
+    <Compile Include="BO\BOEmployeeHiringReference.cs" />
+    <Compile Include="BO\BOEmployeePersonalAttribute.cs" />
+    <Compile Include="BO\BOEmployeeManagementRemarks.cs" />
+    <Compile Include="Custom\EmployeeUploadModel.cs" />
+    <Compile Include="Custom\FsToolBar.cs" />
+    <Compile Include="Custom\GroupRolesDetail.cs" />
+    <Compile Include="Custom\IsValidateForDelete.cs" />
+    <Compile Include="Custom\SPData.cs" />
+    <Compile Include="Custom\TailorOrderModel.cs" />
+    <Compile Include="IdentityModel\ApplicationRole.cs" />
+    <Compile Include="IdentityModel\BOUser.cs" />
+    <Compile Include="BO\BOActionLogging.cs" />
+    <Compile Include="BO\BOAdditionType.cs" />
+    <Compile Include="BO\BOAllowanceOrBenefitType.cs" />
+    <Compile Include="BO\BOAllowancesOrBenefit.cs" />
+    <Compile Include="BO\BOAPPCNFDataLogging.cs" />
+    <Compile Include="BO\BOAppConfiguration.cs" />
+    <Compile Include="BO\BOAppConfigurationDetail.cs" />
+    <Compile Include="BO\BOApprovalAuthorityType.cs" />
+    <Compile Include="BO\BOAreaOfDistrictWard.cs" />
+    <Compile Include="BO\BOAttendanceDiscrepancy.cs" />
+    <Compile Include="BO\BOAttendanceMachineType.cs" />
+    <Compile Include="BO\BOCalendar.cs" />
+    <Compile Include="BO\BOCityTown.cs" />
+    <Compile Include="BO\BOCOA.cs" />
+    <Compile Include="BO\BOCOAConfiguration.cs" />
+    <Compile Include="BO\BOCOAMapping.cs" />
+    <Compile Include="BO\BOCOANature.cs" />
+    <Compile Include="BO\BOCountryRegion.cs" />
+    <Compile Include="BO\BOCRMDataLogging.cs" />
+    <Compile Include="BO\BOCulture.cs" />
+    <Compile Include="BO\BOCurrency.cs" />
+    <Compile Include="BO\BODataType.cs" />
+    <Compile Include="BO\BODeductionType.cs" />
+    <Compile Include="BO\BODegree.cs" />
+    <Compile Include="BO\BODegreeInstitute.cs" />
+    <Compile Include="BO\BODepartment.cs" />
+    <Compile Include="BO\BODesignation.cs" />
+    <Compile Include="BO\BODiscrepancyType.cs" />
+    <Compile Include="BO\BODistrictWard.cs" />
+    <Compile Include="BO\BODocumentDetailOfStatement.cs" />
+    <Compile Include="BO\BODocumentOfStatement.cs" />
+    <Compile Include="BO\BODomainOfStatement.cs" />
+    <Compile Include="BO\BODomainType.cs" />
+    <Compile Include="BO\BOEmployeeAcademic.cs" />
+    <Compile Include="BO\BOEmployeeAllowanceOrBenefit.cs" />
+    <Compile Include="BO\BOEmployeeAttendance.cs" />
+    <Compile Include="BO\BOEmployeeFaceOrBiometric.cs" />
+    <Compile Include="BO\BOEmployeeFamily.cs" />
+    <Compile Include="BO\BOEmployeeInfo.cs" />
+    <Compile Include="BO\BOEmployeeInfoHistory.cs" />
+    <Compile Include="BO\BOEmployeeInfoRevision.cs" />
+    <Compile Include="BO\BOEmployeeLeave.cs" />
+    <Compile Include="BO\BOEmployeeReference.cs" />
+    <Compile Include="BO\BOEmployeeRelation.cs" />
+    <Compile Include="BO\BOEmployeeStatus.cs" />
+    <Compile Include="BO\BOEquipment.cs" />
+    <Compile Include="BO\BOEquipmentStatus.cs" />
+    <Compile Include="BO\BOEquipmentType.cs" />
+    <Compile Include="BO\BOErrorLogging.cs" />
+    <Compile Include="BO\BOExpenseType.cs" />
+    <Compile Include="BO\BOFICODataLogging.cs" />
+    <Compile Include="BO\BOFiscalYear.cs" />
+    <Compile Include="BO\BOHireType.cs" />
+    <Compile Include="BO\BOHRMDataLogging.cs" />
+    <Compile Include="BO\BOIMMAcquireType.cs" />
+    <Compile Include="BO\BOIMMConfiguration.cs" />
+    <Compile Include="BO\BOIMMDataLogging.cs" />
+    <Compile Include="BO\BOIMMGender.cs" />
+    <Compile Include="BO\BOIMMLifeType.cs" />
+    <Compile Include="BO\BOIMMManufacturedBy.cs" />
+    <Compile Include="BO\BOIMMSectionOrBrand.cs" />
+    <Compile Include="BO\BOIMMTaxGroup.cs" />
+    <Compile Include="BO\BOIMMTaxGroupDetail.cs" />
+    <Compile Include="BO\BOIncomeTaxSlab.cs" />
+    <Compile Include="BO\BOItemAspect.cs" />
+    <Compile Include="BO\BOItemAspectDetail.cs" />
+    <Compile Include="BO\BOItemAttribute.cs" />
+    <Compile Include="BO\BOItemAttributeDetail.cs" />
+    <Compile Include="BO\BOItemCategory.cs" />
+    <Compile Include="BO\BOItemCategoryAttributeAspect.cs" />
+    <Compile Include="BO\BOItemCategoryAttributeAspectDetail.cs" />
+    <Compile Include="BO\BOJobRole.cs" />
+    <Compile Include="BO\BOLeaseType.cs" />
+    <Compile Include="BO\BOLeavePolicy.cs" />
+    <Compile Include="BO\BOLeavePolicyDetail.cs" />
+    <Compile Include="BO\BOLeaveType.cs" />
+    <Compile Include="BO\BOLoanType.cs" />
+    <Compile Include="BO\BOLocationSite.cs" />
+    <Compile Include="BO\BOLocationSiteType.cs" />
+    <Compile Include="BO\BOLoggingInformation.cs" />
+    <Compile Include="BO\BOLoginAttempts.cs" />
+    <Compile Include="BO\BOMenu.cs" />
+    <Compile Include="BO\BOMenuControlInfo.cs" />
+    <Compile Include="BO\BOModuleColInfo.cs" />
+    <Compile Include="BO\BOModuleParamInfo.cs" />
+    <Compile Include="BO\BOOnwerShipType.cs" />
+    <Compile Include="BO\BOOrganizationCompany.cs" />
+    <Compile Include="BO\BOPackingType.cs" />
+    <Compile Include="BO\BOPartyOrCustomer.cs" />
+    <Compile Include="BO\BOPayGrade.cs" />
+    <Compile Include="BO\BOPayGradeAllowanceOrBenefit.cs" />
+    <Compile Include="BO\BOPaymentMode.cs" />
+    <Compile Include="BO\BOPriority.cs" />
+    <Compile Include="BO\BOProcessApprovalAlert.cs" />
+    <Compile Include="BO\BOProcessApprovalWorkflow.cs" />
+    <Compile Include="BO\BOProfileGroup.cs" />
+    <Compile Include="BO\BOProfileGroupDetail.cs" />
+    <Compile Include="BO\BORebateType.cs" />
+    <Compile Include="BO\BORecordStatus.cs" />
+    <Compile Include="BO\BOReportDashboardInfo.cs" />
+    <Compile Include="BO\BOSalaryBreakUpPolicy.cs" />
+    <Compile Include="BO\BOSalaryBreakUpPolicyDetail.cs" />
+    <Compile Include="BO\BOSalaryTransferMode.cs" />
+    <Compile Include="BO\BOSectorZone.cs" />
+    <Compile Include="BO\BOSecurityRight.cs" />
+    <Compile Include="BO\BOShift.cs" />
+    <Compile Include="BO\BOShiftDay.cs" />
+    <Compile Include="BO\BOSRMDataLogging.cs" />
+    <Compile Include="BO\BOStateProvince.cs" />
+    <Compile Include="BO\BOSystemOrWebPool.cs" />
+    <Compile Include="BO\BOTaxAdjustmentType.cs" />
+    <Compile Include="BO\BOTransactionDetail.cs" />
+    <Compile Include="BO\BOTransactionDocumentConfiguration.cs" />
+    <Compile Include="BO\BOTransactionDocumentProcess.cs" />
+    <Compile Include="BO\BOTransactionMaster.cs" />
+    <Compile Include="BO\BOUMSDataLogging.cs" />
+    <Compile Include="BO\BOUOM.cs" />
+    <Compile Include="BO\BOUserLocationSitePermission.cs" />
+    <Compile Include="BO\BOUserMenuAdditionSubtraction.cs" />
+    <Compile Include="BO\BOUserOrganizationCompanyPermission.cs" />
+    <Compile Include="BO\BOUserPartyOrCustomerPermission.cs" />
+    <Compile Include="BO\BOUserProfileGroup.cs" />
+    <Compile Include="BO\BOUserSystemOrWebPermission.cs" />
+    <Compile Include="BO\BOUserVendorOrSupplierPermission.cs" />
+    <Compile Include="BO\BOVendorOrSupplier.cs" />
+    <Compile Include="BO\BOVoucherType.cs" />
+    <Compile Include="MultiTenant.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BO\listmyfolder.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
